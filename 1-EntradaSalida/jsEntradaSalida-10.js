@@ -8,12 +8,15 @@ en el cuadro de texto "RESULTADO"*/
 // 	let importe;
 // 	let descuento;
 // 	let resultado;
+// let porcentaje;
+
+// porcentaje = 25;
 
 // 	// ASIGNO EL VALOR DE LA CAJA DE TEXTO A LA VARIABLE
 // 	importe = parseInt(document.getElementById("txtIdImporte").value);
 
 // 	// CALCULO EL DESCUENTO
-// 	descuento = importe * 0.25;
+// 	descuento = importe * porcentaje / 100;
 
 // 	// OBTENGO EN NUEVO IMPORTE
 // 	resultado = importe - descuento;
@@ -35,10 +38,10 @@ function mostrarAumento() {
 	importe = parseInt(document.getElementById("txtIdImporte").value);
 
 	// PIDO EL PORCENTAJE POR PROMPT
-	porcDescuento = prompt("Ingrese un porcentaje de descuento: ");
+	porcDescuento = parseInt(prompt("Ingrese un porcentaje de descuento: "));
 
 	// CALCULO EL DESCUENTO
-	descuento = (importe * porcDescuento) / 100;
+	descuento = importe * porcDescuento / 100;
 
 	// SACO EL RESULTADO
 	resultado = importe - descuento;
