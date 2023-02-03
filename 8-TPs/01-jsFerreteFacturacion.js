@@ -1,4 +1,5 @@
-/*1.	Para el departamento de facturación:
+/*1.	LIZ CAROLINA FERNANDEZ M.
+Para el departamento de facturación:
 A.	Ingresar tres precios de productos y mostrar la suma de los mismos.
 B.	Ingresar tres precios de productos y mostrar el promedio de los mismos.
 C.	ingresar tres precios de productos  y mostrar precio final (más IVA 21%).
@@ -66,6 +67,7 @@ function PrecioFinal() {
     mensaje = "El precio final es " + preciofinal;
 
     alert(mensaje);
+//HEAD
     console.log(mensaje);
 }
 
@@ -198,3 +200,6 @@ function PrecioFinal() {
 //         console.log("El precio fina con el IVA del 21% es: " + precioFinal);
     
 // }
+
+
+// 5fef26c524b7e000a45ca87b26f8666a325f9246
