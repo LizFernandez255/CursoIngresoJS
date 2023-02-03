@@ -1,4 +1,4 @@
-/*3.	LIZ CAROLINA FERNANDEZ
+/*3.	LIZ CAROLINA FERNANDEZ.
 Para el departamento de Pinturas:
 A.	Al ingresar una temperatura en Fahrenheit debemos mostrar la temperatura en Centígrados con un mensaje concatenado (ej.: " 32 Fahrenheit son 0 centígrados").
 (32 °F - 32) x 5/9
