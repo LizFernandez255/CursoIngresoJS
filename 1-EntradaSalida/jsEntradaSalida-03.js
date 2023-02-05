@@ -1,5 +1,5 @@
 /* LIZ CAROLINA FERNANDEZ
-Debemos lograr tomar un dato por 'ID'
+Debemos lograr tomar un dato por 'ID'b
 y luego mostrarlo por 'Alert' al presionar el botón  'mostrar'*/
 // function mostrar() {
 // 	let nombreIngresado;
