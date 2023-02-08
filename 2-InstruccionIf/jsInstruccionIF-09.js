@@ -1,11 +1,9 @@
 function mostrar()
 {
 	let numero;
-	let max = 10;
-	let min = 1;
 	let mensaje;
 
-	numero = Math.floor(Math.random() * (max - min + 1) + min);
+	numero = Math.floor(Math.random() * 10 + 1);
 	
 	mensaje = numero;
 	
