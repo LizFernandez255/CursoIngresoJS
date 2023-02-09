@@ -20,11 +20,13 @@ function CalcularPrecio() {
     let precioDes;
     let precioFinal;
     let precioImpuesto;
+    let impuesto;
     let mensaje;
 
     // INICIALIZO VARIABLES FIJAS
     aumento = 10;
     precioBase = 35;
+    porcentaje = 0;
 
     // TOMO LOS DATOS DE LAS CAJAS
     cantLamp = parseInt(document.getElementById("txtIdCantidad").value);
@@ -34,30 +36,30 @@ function CalcularPrecio() {
     precio = cantLamp * precioBase;
 
     // AGREGO PORCENTAJES SEGÚN CONDICIONES
-    if (cantLamp >= 6) {
+    if (cantLamp > 5) {
         porcentaje = 50;
-
-    } else if (cantLamp == 5 && marca == "ArgentinaLuz") {
-        porcentaje = 40;
-
-    } else if (cantLamp == 5 && marca != "ArgentinaLuz") {
-        porcentaje = 30;
-
-    } else if (cantLamp == 4 && (marca == "ArgentinaLuz" || marca == "FelipeLamparas")) {
-        porcentaje = 25;
-
+    } else if (cantLamp == 5) {
+        if (marca == "ArgentinaLuz") {
+            porcentaje = 40;
+        } else {
+            porcentaje = 30;
+        }
     } else if (cantLamp == 4) {
-        porcentaje = 20;
-
-    } else if (cantLamp == 3 && marca == "ArgentinaLuz") {
-        porcentaje = 15;
-
-    } else if (cantLamp == 3 && marca == "FelipeLamparas") {
-        porcentaje = 10;
-
+        if (marca == "ArgentinaLuz" || marca == "FelipeLamparas") {
+            porcentaje = 25;
+        } else {
+            porcentaje = 20;
+        }
     } else if (cantLamp == 3) {
-        porcentaje = 5;
-
+        if (marca == "ArgentinaLuz") {
+            porcentaje = 15;
+        } else if (marca == "FelipeLamparas") {
+            porcentaje = 10;
+        } else {
+            porcentaje = 5;
+        }
+    } else {
+        porcentaje = 0;
     }
 
     // CALCULO EL PRECIO FINAL CON DESCUENTO
@@ -69,10 +71,9 @@ function CalcularPrecio() {
 
     // CONDICION SI EL PRECIO FINAL SUPERA LOS $120
     if (precioFinal >= 120) {
-        precioFinal * aumento / 100;
+        impuesto = precioFinal * aumento / 100;
         precioImpuesto = precioFinal + aumento;
-
-        mensaje = "Usted pago $" + precioImpuesto + " de IIBB., siendo $" + aumento + " el impuesto que se pagó.";
+        alert("Usted pago $" + precioImpuesto + " de IIBB., siendo $" + impuesto + " el impuesto que se pagó.");
     }
 
 
