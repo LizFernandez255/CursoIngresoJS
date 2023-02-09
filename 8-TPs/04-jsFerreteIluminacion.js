@@ -9,95 +9,71 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
 
  */
 function CalcularPrecio() {
-    let precioBase;
-    let cantidad;
+
+    // DECLARO VARIABLES
+    let cantLamp;
     let marca;
     let porcentaje;
+    let aumento;
+    let precioBase;
+    let precio;
     let precioDes;
-    let cantBase;
-    let resultado;
+    let precioFinal;
+    let precioImpuesto;
     let mensaje;
 
+    // INICIALIZO VARIABLES FIJAS
+    aumento = 10;
     precioBase = 35;
 
-    cantidad = parseInt(document.getElementById("txtIdCantidad").value);
-
+    // TOMO LOS DATOS DE LAS CAJAS
+    cantLamp = parseInt(document.getElementById("txtIdCantidad").value);
     marca = document.getElementById("Marca").value;
 
-    // A.	Si compra 6 o más  lamparitas bajo consumo tiene un descuento del 50%.
-    if (cantidad >= 6) {
+    // CALCULO EL PRECIO INICIAL
+    precio = cantLamp * precioBase;
 
+    // AGREGO PORCENTAJES SEGÚN CONDICIONES
+    if (cantLamp >= 6) {
         porcentaje = 50;
 
-        cantBase = cantidad * precioBase;
-
-        precioDes = cantBase * porcentaje / 100;
-
-        resultado = cantBase - precioDes;
-
-        mensaje = "$" + resultado;
-    
-    } else if (cantidad == 5 && marca == "ArgentinaLuz") {
-
+    } else if (cantLamp == 5 && marca == "ArgentinaLuz") {
         porcentaje = 40;
 
-        cantBase = cantidad * precioBase;
-
-        precioDes = cantBase * porcentaje / 100;
-
-        resultado = cantBase - precioDes;
-
-        mensaje = "$" + resultado;
-
-    } else if (cantidad == 5 && marca != "ArgentinaLuz") {
-
+    } else if (cantLamp == 5 && marca != "ArgentinaLuz") {
         porcentaje = 30;
 
-        cantBase = cantidad * precioBase;
-
-        precioDes = cantBase * porcentaje / 100;
-
-        resultado = cantBase - precioDes;
-
-        mensaje = "$" + resultado;
-    
-    } else if (cantidad == 4 && (marca == "ArgentinaLuz" || marca == "FelipeLamparas")) {
-       
+    } else if (cantLamp == 4 && (marca == "ArgentinaLuz" || marca == "FelipeLamparas")) {
         porcentaje = 25;
 
-        cantBase = cantidad * precioBase;
-
-        precioDes = cantBase * porcentaje / 100;
-
-        resultado = cantBase - precioDes;
-
-        mensaje = "$" + resultado;
-    
-    } else if ( cantidad == 4){
-        
+    } else if (cantLamp == 4) {
         porcentaje = 20;
 
-        cantBase = cantidad * precioBase;
+    } else if (cantLamp == 3 && marca == "ArgentinaLuz") {
+        porcentaje = 15
 
-        precioDes = cantBase * porcentaje / 100;
+    } else if (cantLamp == 3) {
+        porcentaje = 5;
 
-        resultado = cantBase - precioDes;
+    }
 
-        mensaje = "$" + resultado;
-    
-    } else if ( cantidad == 3 && marca == "ArgentinaLuz")
-     
-    porcentaje = 15;
+    // CALCULO EL PRECIO FINAL CON DESCUENTO
+    precioDes = precio * porcentaje / 100;
+    precioFinal = precio - precioDes;
 
-        cantBase = cantidad * precioBase;
+    // CONCATENO MENSAJE PARA PRECIO FINAL CON DESCUENTO
+    mensaje = "$" + precioFinal;
 
-        precioDes = cantBase * porcentaje / 100;
+    // CONDICION SI EL PRECIO FINAL SUPERA LOS $120
+    if (precioFinal >= 120) {
+        precioFinal * aumento / 100;
+        precioImpuesto = precioFinal + aumento;
 
-        resultado = cantBase - precioDes;
+        mensaje = "Usted pago $" + precioImpuesto + " de IIBB., siendo $" + aumento + " el impuesto que se pagó.";
+    }
+    // PRECIO DE UNA LAMPARA
+    mensaje = "$" + precio;
 
-        mensaje = "$" + resultado;
-
-
-    
+    // EXPONGO LOS RESULTADOS EN LA CAJA DE PRECIOS CON DESCUENTO
     document.getElementById("txtIdprecioDescuento").value = mensaje;
 }

@@ -49,41 +49,41 @@ function mostrar() {
 
 // -------------------------------2 BIS-----------------------------------------
 
-function mostrar() {
+// function mostrar() {
 
-	let altura;
-	let peso;
-	let nombre;
-	let IMC;
-	let mensaje;
+// 	let altura;
+// 	let peso;
+// 	let nombre;
+// 	let IMC;
+// 	let mensaje;
 
-	nombre = prompt("Ingrese su nombre:");
-	peso = parseFloat(prompt("Ingrese su peso:"));
-	altura = parseFloat(prompt("Ingrese su altura:"));
+// 	nombre = prompt("Ingrese su nombre:");
+// 	peso = parseFloat(prompt("Ingrese su peso:"));
+// 	altura = parseFloat(prompt("Ingrese su altura:"));
 
-	IMC = peso / (altura * altura);
+// 	IMC = peso / (altura * altura);
 
-	if (IMC < 18.5) {
-		mensaje = nombre + ": Bajo peso.";
+// 	if (IMC < 18.5) {
+// 		mensaje = nombre + ": Bajo peso.";
 
-	} else if (IMC >= 18.5 && IMC <= 24.9) {
-		mensaje = nombre + ": Peso normal.";
+// 	} else if (IMC >= 18.5 && IMC <= 24.9) {
+// 		mensaje = nombre + ": Peso normal.";
 
-	} else if (IMC >= 25 && IMC <= 26.9) {
-		mensaje = nombre + ": Preobesidad.";
+// 	} else if (IMC >= 25 && IMC <= 26.9) {
+// 		mensaje = nombre + ": Preobesidad.";
 
-	} else if (IMC >= 27 && IMC <= 29.9) {
-		mensaje = nombre + ": Obesidad I.";
+// 	} else if (IMC >= 27 && IMC <= 29.9) {
+// 		mensaje = nombre + ": Obesidad I.";
 
-	} else if (IMC >= 30 && IMC <= 34.9) {
-		mensaje = nombre + ": Obesidad II.";
+// 	} else if (IMC >= 30 && IMC <= 34.9) {
+// 		mensaje = nombre + ": Obesidad II.";
 
-	} else {
-		mensaje = nombre + ": Obesidad III";
-	}
+// 	} else {
+// 		mensaje = nombre + ": Obesidad III";
+// 	}
 
-	document.getElementById("txtIdEdad").value = mensaje;
+// 	document.getElementById("txtIdEdad").value = mensaje;
 
-}
+// }
 
 
