@@ -50,7 +50,10 @@ function CalcularPrecio() {
         porcentaje = 20;
 
     } else if (cantLamp == 3 && marca == "ArgentinaLuz") {
-        porcentaje = 15
+        porcentaje = 15;
+
+    } else if (cantLamp == 3 && marca == "FelipeLamparas") {
+        porcentaje = 10;
 
     } else if (cantLamp == 3) {
         porcentaje = 5;
@@ -71,8 +74,7 @@ function CalcularPrecio() {
 
         mensaje = "Usted pago $" + precioImpuesto + " de IIBB., siendo $" + aumento + " el impuesto que se pagó.";
     }
-    // PRECIO DE UNA LAMPARA
-    mensaje = "$" + precio;
+
 
     // EXPONGO LOS RESULTADOS EN LA CAJA DE PRECIOS CON DESCUENTO
     document.getElementById("txtIdprecioDescuento").value = mensaje;
