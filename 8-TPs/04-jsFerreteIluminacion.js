@@ -8,7 +8,96 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
 
  */
-function CalcularPrecio () 
-{
- 	
+function CalcularPrecio() {
+    let precioBase;
+    let cantidad;
+    let marca;
+    let porcentaje;
+    let precioDes;
+    let cantBase;
+    let resultado;
+    let mensaje;
+
+    precioBase = 35;
+
+    cantidad = parseInt(document.getElementById("txtIdCantidad").value);
+
+    marca = document.getElementById("Marca").value;
+
+    // A.	Si compra 6 o más  lamparitas bajo consumo tiene un descuento del 50%.
+    if (cantidad >= 6) {
+
+        porcentaje = 50;
+
+        cantBase = cantidad * precioBase;
+
+        precioDes = cantBase * porcentaje / 100;
+
+        resultado = cantBase - precioDes;
+
+        mensaje = "$" + resultado;
+    
+    } else if (cantidad == 5 && marca == "ArgentinaLuz") {
+
+        porcentaje = 40;
+
+        cantBase = cantidad * precioBase;
+
+        precioDes = cantBase * porcentaje / 100;
+
+        resultado = cantBase - precioDes;
+
+        mensaje = "$" + resultado;
+
+    } else if (cantidad == 5 && marca != "ArgentinaLuz") {
+
+        porcentaje = 30;
+
+        cantBase = cantidad * precioBase;
+
+        precioDes = cantBase * porcentaje / 100;
+
+        resultado = cantBase - precioDes;
+
+        mensaje = "$" + resultado;
+    
+    } else if (cantidad == 4 && (marca == "ArgentinaLuz" || marca == "FelipeLamparas")) {
+       
+        porcentaje = 25;
+
+        cantBase = cantidad * precioBase;
+
+        precioDes = cantBase * porcentaje / 100;
+
+        resultado = cantBase - precioDes;
+
+        mensaje = "$" + resultado;
+    
+    } else if ( cantidad == 4){
+        
+        porcentaje = 20;
+
+        cantBase = cantidad * precioBase;
+
+        precioDes = cantBase * porcentaje / 100;
+
+        resultado = cantBase - precioDes;
+
+        mensaje = "$" + resultado;
+    
+    } else if ( cantidad == 3 && marca == "ArgentinaLuz")
+     
+    porcentaje = 15;
+
+        cantBase = cantidad * precioBase;
+
+        precioDes = cantBase * porcentaje / 100;
+
+        resultado = cantBase - precioDes;
+
+        mensaje = "$" + resultado;
+
+
+    
+    document.getElementById("txtIdprecioDescuento").value = mensaje;
 }
