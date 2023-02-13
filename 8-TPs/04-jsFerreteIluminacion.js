@@ -53,6 +53,7 @@ function CalcularPrecio() {
                     porcentaje = 15;
                     break;
             }
+            break;
         case "FelipeLamparas":
             switch (cantLamp) {
                 case 1:
@@ -69,6 +70,7 @@ function CalcularPrecio() {
                     porcentaje = 10;
                     break;
             }
+            break;
         case "JeLuz":
         case "HazIluminacion":
         case "Osram":
