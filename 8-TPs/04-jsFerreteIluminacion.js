@@ -36,53 +36,73 @@ function CalcularPrecio() {
     // CALCULO EL PRECIO INICIAL
     precio = cantLamp * precioBase;
 
-
-    if (cantLamp > 5) {
-        porcentaje = 50;
-            } else {
-                switch (marca) {
-                    case "ArgentinaLuz":
-                        if (cantLamp == 5) {
-                            porcentaje = 40;
-                        } else if (cantLamp == 4) {
-                            porcentaje = 25;
-                        } else if (cantLamp == 3) {
-                            porcentaje = 15;
-                        }
-                        break;
-                    case "FelipeLamparas":
-                        if (cantLamp == 4) {
-                            porcentaje = 25;
-                        } else if (cantLamp == 3) {
-                            porcentaje = 10;
-                        }
-                        break;
-                    case "JeLuz":
-                    case "HazIluminacion":
-                    case "Osram":
-                        if (cantLamp == 5) {
-                            porcentaje = 30;
-                        } else if (cantLamp == 4) {
-                            porcentaje = 20;
-                        } else if (cantLamp == 3) {
-                            porcentaje = 5;
-                            break;
-                        } default:
-                        porcentaje = 0;
-                        break;
-                }
+    switch (marca) {
+        case "ArgentinaLuz":
+            switch (cantLamp) {
+                case 1:
+                case 2:
+                    porcentaje = 0;
+                    break;
+                case 5:
+                    porcentaje = 40;
+                    break;
+                case 4:
+                    porcentaje = 25;
+                    break;
+                case 3:
+                    porcentaje = 15;
+                    break;
             }
+        case "FelipeLamparas":
+            switch (cantLamp) {
+                case 1:
+                case 2:
+                    porcentaje = 0;
+                    break;
+                case 5:
+                    porcentaje = 30;
+                    break;
+                case 4:
+                    porcentaje = 25;
+                    break;
+                case 3:
+                    porcentaje = 10;
+                    break;
+            }
+        case "JeLuz":
+        case "HazIluminacion":
+        case "Osram":
+            switch (cantLamp) {
+                case 1:
+                case 2:
+                    porcentaje = 0;
+                    break;
+                case 5:
+                    porcentaje = 30;
+                    break;
+                case 4:
+                    porcentaje = 20;
+                    break;
+                case 3:
+                    porcentaje = 5;
+                    break;
+            }
+            break;
+        default:
+            porcentaje = 50;
+            break;
+    }
 
-            // CALCULO EL PRECIO FINAL CON DESCUENTO
-            precioDes = precio * porcentaje / 100;
-            precioFinal = precio - precioDes;
-            
-            // CONCATENO MENSAJE PARA PRECIO FINAL CON DESCUENTO
-            mensaje = "$" + precioFinal;
-            
-            // CONDICION SI EL PRECIO FINAL SUPERA LOS $120
-            if (precioFinal >= 120) {
-                impuesto = precioFinal * aumento / 100;
+    // CALCULO EL PRECIO FINAL CON DESCUENTO
+    precioDes = precio * porcentaje / 100;
+    precioFinal = precio - precioDes;
+
+    // CONCATENO MENSAJE PARA PRECIO FINAL CON DESCUENTO
+    mensaje = "$" + precioFinal;
+
+    // CONDICION SI EL PRECIO FINAL SUPERA LOS $120
+    if (precioFinal >= 120) {
+        impuesto = precioFinal * aumento / 100;
         precioImpuesto = precioFinal + aumento;
         mensajePImpuesto = "Usted pago $" + precioImpuesto + " de IIBB., siendo $" + impuesto + " el impuesto que se pagó.";
 
@@ -92,22 +112,24 @@ function CalcularPrecio() {
 
     // EXPONGO LOS RESULTADOS EN LA CAJA DE PRECIOS CON DESCUENTO
     document.getElementById("txtIdprecioDescuento").value = mensaje;
-    
-    
-    
-    
+
+
+
+
+
+
 }
 
 
 //------------------------------------------------------------------------------------------------------------------------------
 // switch (cantLamp) {
-//     case 1:
-//     case 2:
-//         porcentaje = 0;
-//         break;
-//     case 5:
+    //     case 1:
+    //     case 2:
+    //         porcentaje = 0;
+    //         break;
+    //     case 5:
 //         if (marca == "ArgentinaLuz") {
-//             porcentaje = 40;
+    //             porcentaje = 40;
 //         } else {
 //             porcentaje = 30;
 //         }
@@ -132,7 +154,7 @@ function CalcularPrecio() {
 //             porcentaje = 50;
 //             break;
 //         }
-        
+
 //-----------------------------------------------------------------------------------------------------------------
 //     // AGREGO PORCENTAJES SEGÚN CONDICIONES
 //     if (cantLamp > 5) {
@@ -160,3 +182,39 @@ function CalcularPrecio() {
 //     } else {
 //         porcentaje = 0;
 //     }
+// -----------------------------------------------------------------------------------------------------------------
+// if (cantLamp > 5) {
+//     porcentaje = 50;
+//         } else {
+//             switch (marca) {
+//                 case "ArgentinaLuz":
+//                     if (cantLamp == 5) {
+//                         porcentaje = 40;
+//                     } else if (cantLamp == 4) {
+//                         porcentaje = 25;
+//                     } else if (cantLamp == 3) {
+//                         porcentaje = 15;
+//                     }
+//                     break;
+//                 case "FelipeLamparas":
+//                     if (cantLamp == 4) {
+//                         porcentaje = 25;
+//                     } else if (cantLamp == 3) {
+//                         porcentaje = 10;
+//                     }
+//                     break;
+//                 case "JeLuz":
+//                 case "HazIluminacion":
+//                 case "Osram":
+//                     if (cantLamp == 5) {
+//                         porcentaje = 30;
+//                     } else if (cantLamp == 4) {
+//                         porcentaje = 20;
+//                     } else if (cantLamp == 3) {
+//                         porcentaje = 5;
+//                         break;
+//                     } default:
+//                     porcentaje = 0;
+//                     break;
+//             }
+//         }
