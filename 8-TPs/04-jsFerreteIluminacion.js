@@ -35,69 +35,50 @@ function CalcularPrecio() {
     // CALCULO EL PRECIO INICIAL
     precio = cantLamp * precioBase;
 
-    switch (marca) {
-        case "ArgentinaLuz":
-            switch (cantLamp) {
-                case 1:
-                case 2:
-                    porcentaje = 0;
-                    break;
-                case 5:
+    switch (cantLamp) {
+        case 5:
+            switch (marca) {
+                case "ArgentinaLuz":
                     porcentaje = -40;
                     break;
-                case 4:
-                    porcentaje = -25;
-                    break;
-                case 3:
-                    porcentaje = -15;
-                    break;
                 default:
-                    porcentaje = -50;
+                    porcentaje = -30;
                     break;
             }
             break;
-        case "FelipeLamparas":
-            switch (cantLamp) {
-                case 1:
-                case 2:
-                    porcentaje = 0;
-                    break;
-                case 5:
-                    porcentaje = -30;
-                    break;
-                case 4:
+        case 4:
+            switch (marca) {
+                case "ArgentinaLuz":
+                case "FelipeLamparas":
                     porcentaje = -25;
                     break;
-                case 3:
+                default:
+                    porcentaje = -20;
+                    break;
+            }
+            break;
+        case 3:
+            switch (marca) {
+                case "ArgentinaLuz":
+                    porcentaje = -15;
+                    break;
+                case "FelipeLamparas":
                     porcentaje = -10;
                     break;
                 default:
-                    porcentaje = -50;
+                    porcentaje = -5;
                     break;
             }
             break;
-        case "JeLuz":
-        case "HazIluminacion":
-        case "Osram":
-            switch (cantLamp) {
-                case 1:
-                case 2:
-                    porcentaje = 0;
-                    break;
-                case 5:
-                    porcentaje = -30;
-                    break;
-                case 4:
-                    porcentaje = -20;
-                    break;
-                case 3:
-                    porcentaje = -5;
-                    break;
-                default:
-                    porcentaje = -50;
-                    break;
-            }
+        case 1:
+        case 2:
+            porcentaje = 0;
+            break;
+        default:
+            porcentaje = -50;
+
     }
+
     // CALCULO EL PRECIO FINAL CON DESCUENTO
     precioFinal = precio + (precio * porcentaje / 100);
 
@@ -112,7 +93,6 @@ function CalcularPrecio() {
 
         alert(mensajePImpuesto);
     }
-
 
     // EXPONGO LOS RESULTADOS EN LA CAJA DE PRECIOS CON DESCUENTO
     document.getElementById("txtIdprecioDescuento").value = mensaje;
