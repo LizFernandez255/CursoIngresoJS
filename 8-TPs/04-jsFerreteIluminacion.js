@@ -17,7 +17,6 @@ function CalcularPrecio() {
     let aumento;
     let precioBase;
     let precio;
-    let precioDes;
     let precioFinal;
     let precioImpuesto;
     let impuesto;
@@ -44,13 +43,16 @@ function CalcularPrecio() {
                     porcentaje = 0;
                     break;
                 case 5:
-                    porcentaje = 40;
+                    porcentaje = -40;
                     break;
                 case 4:
-                    porcentaje = 25;
+                    porcentaje = -25;
                     break;
                 case 3:
-                    porcentaje = 15;
+                    porcentaje = -15;
+                    break;
+                default:
+                    porcentaje = -50;
                     break;
             }
             break;
@@ -61,13 +63,16 @@ function CalcularPrecio() {
                     porcentaje = 0;
                     break;
                 case 5:
-                    porcentaje = 30;
+                    porcentaje = -30;
                     break;
                 case 4:
-                    porcentaje = 25;
+                    porcentaje = -25;
                     break;
                 case 3:
-                    porcentaje = 10;
+                    porcentaje = -10;
+                    break;
+                default:
+                    porcentaje = -50;
                     break;
             }
             break;
@@ -80,30 +85,27 @@ function CalcularPrecio() {
                     porcentaje = 0;
                     break;
                 case 5:
-                    porcentaje = 30;
+                    porcentaje = -30;
                     break;
                 case 4:
-                    porcentaje = 20;
+                    porcentaje = -20;
                     break;
                 case 3:
-                    porcentaje = 5;
+                    porcentaje = -5;
+                    break;
+                default:
+                    porcentaje = -50;
                     break;
             }
-            break;
-        default:
-            porcentaje = 50;
-            break;
     }
-
     // CALCULO EL PRECIO FINAL CON DESCUENTO
-    precioDes = precio * porcentaje / 100;
-    precioFinal = precio - precioDes;
+    precioFinal = precio + (precio * porcentaje / 100);
 
     // CONCATENO MENSAJE PARA PRECIO FINAL CON DESCUENTO
     mensaje = "$" + precioFinal;
 
     // CONDICION SI EL PRECIO FINAL SUPERA LOS $120
-    if (precioFinal >= 120) {
+    if (precioFinal > 119) {
         impuesto = precioFinal * aumento / 100;
         precioImpuesto = precioFinal + aumento;
         mensajePImpuesto = "Usted pago $" + precioImpuesto + " de IIBB., siendo $" + impuesto + " el impuesto que se pagó.";
@@ -121,6 +123,7 @@ function CalcularPrecio() {
 
 
 }
+
 
 
 //------------------------------------------------------------------------------------------------------------------------------
