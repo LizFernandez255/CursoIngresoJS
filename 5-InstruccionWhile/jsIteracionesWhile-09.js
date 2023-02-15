@@ -2,48 +2,39 @@
 Al presionar el botón pedir  números  hasta que el usuario quiera,
 mostrar el número máximo y el número mínimo ingresado.*/
 function mostrar() {
-	// declaro variable
-	let numero;
-	let respuesta;
+	// deck¿laro variable
+	let banderaDelPrimero;
 	let numMax;
 	let numMin;
-	let contador
+	let respuesta;
+	let numero;
 
-	// las inicializo
+	// inicializo
+	banderaDelPrimero = true;
 	respuesta = "si";
-	numMax = 0;
-	numMin = 0;
 
-	// mientras la respuesta es si, se ingresa al bucle a:
 	while (respuesta == "si") {
-		// pedir y parsear numero
-		numero = parseInt(prompt("Ingrese numero"));
-
-		numMax = numero;
-		numMin = numero;
-
-		while ( numero < numMin){
-			
+		numero = parseInt(prompt("Ingrese número"));
+		while (isNaN(numero)) {
+			numero = parseInt(prompt("Error. Ingrese un número:"));
+		}
+		if (banderaDelPrimero == true) {
+			numMax = numero;
+			numMin = numero;
+			// los primeros numeros estan aca
+			banderaDelPrimero = false;
+		}
+		else if (numMax < numero) {
+			numMax = numero;
+		}
+		else if (numMin > numero) { //numero ingresado < al minimo
+			numMin = numero;
 		}
 
-		
-
-
-
-		
-		/* if (numMin < numero) {
-			numMin = numero;
-
-			
-		} else if (numMax > numero) {
-			numMax = numero;
-		} */
-		respuesta = prompt("¿Quiere ingresar otro número?");
+		respuesta = prompt("Desea continuar? si/no");
 	}
 
-	
-
-	// expongo los resultados
 	document.getElementById("txtIdMinimo").value = numMin;
 	document.getElementById("txtIdMaximo").value = numMax;
-}//FIN DE LA FUNCIÓN
+
+}
