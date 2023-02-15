@@ -6,11 +6,11 @@ function mostrar() {
 	let sexo;
 
 	// pido string
-	sexo = prompt("ingrese f ó m .");
+	sexo = prompt("b, f ó m .");
 
 	// while (sexo != "f" && sexo != "m") {
 	// mientras el sexo no sea igual a f o m, entro al bucle
-	while (!(sexo == "f" || sexo == "m")) {
+	while (!(sexo == "f" || sexo == "m" || sexo == "b")) {
 		sexo = prompt("Incorrecto. Ingrese f ó m:");
 
 	}

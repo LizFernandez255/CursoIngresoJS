@@ -9,7 +9,7 @@ function mostrar() {
 	numero = parseInt(prompt("Ingrese un número entre 0 y 9:"));
 
 	// mientras el numero sea menor a 0 o mayor a 9, es incorrecto e ingresa el bucle
-	while (numero < 0 || numero > 9) {
+	while (isNaN(numero) || numero > -1 || numero < 10) {
 		numero = prompt("Incorrecto. Ingrese un número dento del rango solicitado");
 	}
 
