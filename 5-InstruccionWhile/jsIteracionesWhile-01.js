@@ -1,5 +1,5 @@
 /* al presionar el botón mostrar 10 repeticiones con números ASCENDENTE, desde el 1 al 10. */
-function mostrar() {
+/* function mostrar() {
 	// declaro variables
 	let i;
 	let mensaje;
@@ -16,6 +16,59 @@ function mostrar() {
 	}
 	// muestro
 	alert(mensaje);
+} */
+function mostrar() {
+let banderaDelPrimero;
+	let edadMax;
+	let edadMin;
+	let nombre;
+	let edad;
+	let respuesta;
+	let nombreMin;
+	let nombreMax;
+	let mensajeMax;
+	let mensajeMin;
+
+	banderaDelPrimero = true;
+	respuesta = "s";
+		
+		while(respuesta == "s") {
+			nombre = prompt("Ingrese su nombre");
+			edad = parseInt(prompt("Ingrese número"));
+	
+		while (isNaN(edad) || edad < 0 || edad > 103 ) {
+			edad = parseInt(prompt("Error. Ingrese su edad:"));
+
+		}
+
+		if (banderaDelPrimero == true) {
+			edadMax = edad;
+			edadMin = edad;
+			nombreMax = nombre;
+			nombreMin = nombre;
+			banderaDelPrimero = false;
+		}
+		else if (edadMax < edad) { //numero ingresado < al minimo
+			nombreMax = nombre;
+			edadMax = edad;
+		
+		} else if (edadMin > edad ){
+			nombreMin = nombre;
+			edadMin = edad;
+
+		}
+
+		respuesta = prompt("Desea ingresar mas datos? s/n");
+		
+	}
+	
+	mensajeMax = "La edad maxima es " + edadMax + " de " + nombre;
+	mensajeMin = "La edad minima es " + edadMin + " de " + nombre;
+
+	document.write(mensajeMax) + "</br>";
+	document.write(mensajeMin) + "</br>";
+	
+	
 }
 
 

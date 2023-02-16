@@ -11,91 +11,63 @@ hasta que el usuario quiera, mostrar:
 8-Promedios de negativos.
 9-Diferencia entre positivos y negativos, (positvos-negativos). */
 function mostrar() {
-	//declarar contadores y variables .
 	let respuesta;
-	let cantPositivos;
-	let cantNegativos;
-	let negativo;
-	let positivo;
 	let numero;
-	let promPositivo;
-	let promNegativo;
-	let parPositivo;
-	let parNegativo;
-	let resto;
-	let cero;
+	let sumaNegativos;
+	let sumaPositivos;
+	let contadorPositivos;
+	let contadorNegativos;
+	let contador0;
+	let contadorPares;
+	let promedioPositivos;
+	let promedioNegativos;
 	let diferencia;
-	let parTotal;
 
-	respuesta = "si";
-	cantPositivos = 0;
-	cantNegativos = 0;
-	negativo = 0;
-	positivo = 0;
-	numero = 0;
-	promPositivo = 0;
-	promNegativo = 0;
-	resto = 0;
-	cero = 0;
+	contadorPositivos = 0;
+	contadorNegativos = 0;
+	contador0 = 0;
+	contadorPares = 0;
+	sumaNegativos = 0;
+	sumaPositivos = 0;
+	respuesta = "s";
 
-	// mientras la respuesta es si, se ingresa al bucle a:
-	while (respuesta == "si") {
+	while (respuesta == "s") {
 		// pedir y parsear numero
 		numero = parseInt(prompt("Ingrese número"));
 		while (isNaN(numero)) {
 			numero = parseInt(prompt("Error. Ingrese un número:"));
 		}
-		// si numero es menor a 0, los multiplico
-		if (numero > 0) {
 
-			positivo = positivo + numero;
+		if( numero < 0){
+			sumaNegativos = sumaPositivos + numero;
+			contadorNegativos = contadorNegativos + 1;
 
-			cantPositivos = cantPositivos + 1;
-
-			resto = numero % 2;
-
+		}else if(numero > 0){
+			sumaPositivos = sumaPositivos + numero;
+			contadorPositivos = contadorPositivos + 1;
+		}else {
+			contador0 = contador0 + 1;
 		}
-		else if (resto == 0) {
-			parPositivo = parPositivo + 1;
-		}
-
-		if (numero < 0) {
-			negativo = negativo + numero;
-
-			cantNegativos = cantNegativos + 1;
-
-			resto = numero % 2;
-
-			if (resto == 0) {
-				parNegativo = parNegativo + 1;
-			}
-		}
-
-		else {
-			cero = cero + 1;
+		if (numero % 2 == 0){
+			contadorPares = contadorPares + 1;
 
 		}
 
-		respuesta = prompt("Desea continuar? si/no");
-
-	} while (respuesta == "si");
-
-	diferencia = positivo - negativo;
-
-	promPositivo = positivo / cantPositivos;
-
-	promNegativo = negativo / cantNegativos;
-
-	parTotal = positivo + negativo;
-
-	document.write("La suma de los numeros positivos es : " + positivo + "</br>");
-	document.write("La suma de los numeros negativos es : " + negativo + "</br>");
-	document.write("La cantidad de numeros positivos es : " + cantPositivos + "</br>");
-	document.write("La cantidad de numeros negativos es : " + cantNegativos + "</br>");
-	document.write("La cantidad de ceros es : " + cero + "</br>");
-	document.write("El promedio de los numeros positivos es : " + promPositivo + "</br>");
-	document.write("El promedio de los numeros negativos es : " + promNegativo + "</br>");
+		respuesta = prompt("desea continuar? s/n");
+	}	
+	promedioPositivos = sumaPositivos / contadorPositivos;
+	promedioNegativos = sumaNegativos / contadorNegativos;
+	diferencia = sumaPositivos - sumaNegativos;
+	
+	document.write("La suma de los numeros negativos es : " + sumaNegativos + "</br>");
+	document.write("La suma de los numeros positivos es : " + sumaPositivos + "</br>");
+	document.write("La cantidad de numeros positivos es : " + contadorPositivos + "</br>");
+	document.write("La cantidad de numeros negativos es : " + contadorNegativos + "</br>");
+	document.write("La cantidad de ceros es : " + contador0 + "</br>");
+	document.write("El promedio de los numeros positivos es : " + promedioPositivos + "</br>");
+	document.write("El promedio de los numeros negativos es : " + promedioNegativos + "</br>");
 	document.write("La diferencia entre los numeros positivos y los negativos es : " + diferencia + "</br>");
-	document.write("La cantidad de numeros pares es : " + parTotal + "</br>");
+	document.write("La cantidad de numeros pares es : " + contadorPares + "</br>");
 
-}
+
+} 
