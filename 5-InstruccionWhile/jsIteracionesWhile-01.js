@@ -18,7 +18,8 @@
 	alert(mensaje);
 } */
 function mostrar() {
-let banderaDelPrimero;
+
+	let banderaDelPrimero;
 	let edadMax;
 	let edadMin;
 	let nombre;
@@ -33,8 +34,8 @@ let banderaDelPrimero;
 	respuesta = "s";
 		
 		while(respuesta == "s") {
-			nombre = prompt("Ingrese su nombre");
-			edad = parseInt(prompt("Ingrese número"));
+			nombre = prompt("Ingrese su nombre:");
+			edad = parseInt(prompt("Ingrese su edad:"));
 	
 		while (isNaN(edad) || edad < 0 || edad > 103 ) {
 			edad = parseInt(prompt("Error. Ingrese su edad:"));
@@ -62,11 +63,11 @@ let banderaDelPrimero;
 		
 	}
 	
-	mensajeMax = "La edad maxima es " + edadMax + " de " + nombre;
-	mensajeMin = "La edad minima es " + edadMin + " de " + nombre;
+	mensajeMax = "La edad máxima es " + edadMax + " años de " + nombreMax + ".";
+	mensajeMin = "La edad mínima es " + edadMin + " años de " + nombreMin + ".";
 
-	document.write(mensajeMax) + "</br>";
-	document.write(mensajeMin) + "</br>";
+	document.write(mensajeMin + " </br>");
+	document.write(mensajeMax + " </br>");
 	
 	
 }
