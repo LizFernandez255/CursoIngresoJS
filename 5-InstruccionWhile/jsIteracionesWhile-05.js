@@ -17,4 +17,4 @@ function mostrar() {
 	// expongo el sexo
 	document.getElementById("txtIdSexo").value = sexo;
 
-}//FIN DE LA FUNCIÓN
+}//FIN DE LA FUNCIÓN.
