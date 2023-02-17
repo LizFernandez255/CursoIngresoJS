@@ -1,46 +1,7 @@
-/*
-Al presionar el botón pedir  números  hasta que el usuario quiera,
-mostrar el número máximo y el número mínimo ingresado.*/
-// function mostrar() {
-// 	// deck¿laro variable
-// 	let banderaDelPrimero;
-// 	let numMax;
-// 	let numMin;
-// 	let respuesta;
-// 	let numero;
-
-// 	// inicializo
-// 	banderaDelPrimero = true;
-// 	respuesta = "si";
-
-// 	while (respuesta == "si") {
-// 		numero = parseInt(prompt("Ingrese número"));
-// 		while (isNaN(numero)) {
-// 			numero = parseInt(prompt("Error. Ingrese un número:"));
-// 		}
-// 		if (banderaDelPrimero == true) {
-// 			numMax = numero;
-// 			numMin = numero;
-// 			// los primeros numeros estan aca
-// 			banderaDelPrimero = false;
-// 		}
-// 		else if (numMax < numero) {
-// 			numMax = numero;
-// 		}
-// 		else if (numMin > numero) { //numero ingresado < al minimo
-// 			numMin = numero;
-// 		}
-
-// 		respuesta = prompt("Desea continuar? si/no");
-// 	}
-
-// 	document.getElementById("txtIdMinimo").value = numMin;
-// 	document.getElementById("txtIdMaximo").value = numMax;
-
-// }
-
+/* While 9 bis: Al presionar el botón pedir  números  hasta que el usuario quiera,
+mostrar el número máximo y el número mínimo ingresado.
+El menor de los pares y el mayor de los negativos ...(solo si hay) */
 function mostrar() {
-	// deck¿laro variable
 	let banderaDelPrimero;
 	let banderaDelPar;
 	let banderaDelNegativo;
@@ -93,3 +54,43 @@ function mostrar() {
 	document.write("El número mínimo es: " + numMin + "</br>");
 	document.write("El número menor par es: " + numPar + "</br>");
 }
+/*
+Al presionar el botón pedir  números  hasta que el usuario quiera,
+mostrar el número máximo y el número mínimo ingresado.*/
+// function mostrar() {
+// 	// deck¿laro variable
+// 	let banderaDelPrimero;
+// 	let numMax;
+// 	let numMin;
+// 	let respuesta;
+// 	let numero;
+
+// 	// inicializo
+// 	banderaDelPrimero = true;
+// 	respuesta = "si";
+
+// 	while (respuesta == "si") {
+// 		numero = parseInt(prompt("Ingrese número"));
+// 		while (isNaN(numero)) {
+// 			numero = parseInt(prompt("Error. Ingrese un número:"));
+// 		}
+// 		if (banderaDelPrimero == true) {
+// 			numMax = numero;
+// 			numMin = numero;
+// 			// los primeros numeros estan aca
+// 			banderaDelPrimero = false;
+// 		}
+// 		else if (numMax < numero) {
+// 			numMax = numero;
+// 		}
+// 		else if (numMin > numero) { //numero ingresado < al minimo
+// 			numMin = numero;
+// 		}
+
+// 		respuesta = prompt("Desea continuar? si/no");
+// 	}
+
+// 	document.getElementById("txtIdMinimo").value = numMin;
+// 	document.getElementById("txtIdMaximo").value = numMax;
+
+// }----------------------------------------------------------------------------------------------------------------------------------------------
