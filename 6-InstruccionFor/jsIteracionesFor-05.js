@@ -34,29 +34,30 @@ function mostrar() {
 	let desaprobados;
 	let promedio;
 
+	for (i = 0; i < 7; i++) {
+		sexoAlumno = prompt("Ingrese un sexo valido: 'f' o 'm' o 'b'");
 
-	sexoAlumno = prompt("Ingrese un sexo valido: 'f' o 'm' o 'b'");
-
-notaAlumno = parseInt(prompt("Ingrese la nota alumno: "));
-while (isNaN(notaAlumno) && notaAlumno < 0 && notaAlumno > 11) {
-	notaAlumno = parseInt(prompt("Error. Ingrese nota valida: "));
+		notaAlumno = parseInt(prompt("Ingrese la nota alumno: "));
+		while (isNaN(notaAlumno) && notaAlumno < 0 && notaAlumno > 11) {
+			notaAlumno = parseInt(prompt("Error. Ingrese nota valida: "));
+		}
+	
+	totalNotas = totalNotas + notaAlumno;
+	if (banderaNotaBaja == 0) {
+		notaMasBaja = notaAlumno;
+		sexoNotaBaja = sexoAlumno;
+		banderaNotaBaja = 1;
+	} else if (notaAlumno < notaMasBaja) {
+		notaMasBaja = notaAlumno;
+		sexoNotaBaja = sexoAlumno;
+	}
+	if (notaAlumno > 5 && (sexoAlumno == 'm' || sexoAlumno == 'M')) {
+		varMayorSeis = varMayorSeis + 1;
+	}
+	if (notaAlumno < 4) {
+		desaprobados = desaprobados + 1;
+	}
 }
-totalNotas = totalNotas + notaAlumno;
-if (banderaNotaBaja == 0) {
-	notaMasBaja = notaAlumno;
-	sexoNotaBaja = sexoAlumno;
-	banderaNotaBaja = 1;
-} else if (notaAlumno < notaMasBaja) {
-	notaMasBaja = notaAlumno;
-	sexoNotaBaja = sexoAlumno;
-}
-if (notaAlumno > 5 && (sexoAlumno == 'm' || sexoAlumno == 'M')) {
-	varMayorSeis = varMayorSeis + 1;
-}
-if (notaAlumno < 4) {
-	desaprobados = desaprobados + 1;
-}
-
 
 promedio = totalNotas / i;
 
