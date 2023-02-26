@@ -5,11 +5,14 @@ function mostrar()
 {
 	let nombrePersona;
 	let apellidoPersona;
+	let mensaje;
 
 	nombrePersona = prompt("¿Cuál es tu nombre?");
 	apellidoPersona = prompt("¿Cuál es tu apeliido?");
 	
-	alert("Su nombre es " + nombrePersona + " y su apellido " + apellidoPersona);
+	mensaje = "Su nombre es " + nombrePersona + " y su apellido " + apellidoPersona;
+
+	alert(mensaje);
 
 	
 	

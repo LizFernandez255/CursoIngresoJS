@@ -13,12 +13,20 @@ y luego mostrarlo por 'Alert' al presionar el botón  'mostrar'*/
 
 // }
 
+//------------------------------------------------------------------------------------------------------
+
+/* Ejercicio 3.bis: Ingresar descripción (por prompt) y precio de un producto (por id).
+El programa deberá mostrar por alert la descripción del producto 
+junto al precio aumentado en un 30%. */ 
 function mostrar() {
 	// DECLARO VARIABLES
 	let descripcion;
 	let precio;
 	let aumento;
 	let mensaje;
+	let porcentaje;
+
+	porcentaje = 30;
 
 	// TOMO LA DESCRIPCIÓN POR PROMPT
 	descripcion = prompt("Ingrese descripción del producto:");
@@ -27,13 +35,12 @@ function mostrar() {
 	precio = parseInt(document.getElementById("txtIdNombre").value);
 
 	// CALCULO AUMENTO
-	aumento = precio * .30;
+	aumento = precio * porcentaje / 100;
 
-	// APLICO AUMENTO
-	precioAumentado = precio + aumento;
+	precioAumento = precio + aumento;
 
 	// CONCATENO MENSAJE
-	mensaje = descripcion + " " + precioAumentado;
+	mensaje = descripcion + " " + precioAumento;
 
 	//  EXPONGO
 	alert(mensaje);

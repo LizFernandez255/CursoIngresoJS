@@ -24,6 +24,15 @@ ej.: "El resto es 0 ."*/
 // 	alert(mensaje);
 // }
 
+//-------------------------------------------------------------------------------------------------------
+
+/* Ejercicio 8.bis: Ingresar dos numeros por id
+Se pide:
+mostrar por alert:
+a) La suma de los dos numeros
+b) El promedio de los numeros
+c) El resto de los numeros (el primero en modulo del segundo)  */
+
 function SacarResto() {
 
 	// DECALRO VARIABLES

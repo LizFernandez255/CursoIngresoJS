@@ -1,10 +1,13 @@
-/*function mostrar() {
-
+/* Al ingresar una edad que sea igual a 15, mostrar el mensaje "niña bonita". */
+function mostrar() {
+	//DECLARO VARIALES
 	let edad;
 	let mensaje;
 
+	//GUARDO LA EDAD INGRESADA EN LA CAJA, EN LA VARIABLE "EDAD"
 	edad = parseInt(document.getElementById("txtIdEdad").value);
 
+	//"SI LA EDAD INGRESADA ES IGUAL A 15: SE MUESTRA EL MENSAJE"
 	if (edad == 15) {
 
 		mensaje = "Niña bonita";
@@ -12,7 +15,7 @@
 	}
 
 	alert(mensaje);
-}*/
+}
 
 // --------------------------------1 BIS----------------------------------LIZ CAROLINA FERNANDEZ
 // function mostrar() {

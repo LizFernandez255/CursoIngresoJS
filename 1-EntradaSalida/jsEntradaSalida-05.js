@@ -15,6 +15,11 @@ ej.: "Usted se llama José y tiene 66 años" 	*/
 // 	alert(mensaje);
 // }
 
+//------------------------------------------------------------------------------------------
+/* Ejercicio 5.bis: 
+ se debe mostrar un mensaje :
+ "Perez , usted se llama jose y tiene 66 años"
+se debe optener el apellido , de la manera que puedan  */
 function mostrar() {
 
 	// DECLARO VARIABLE
