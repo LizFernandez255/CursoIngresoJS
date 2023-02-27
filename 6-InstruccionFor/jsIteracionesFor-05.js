@@ -1,20 +1,21 @@
 /* al presionar el botón repetir el pedido de número hasta que ingresemos el 9 */
-// function mostrar() 
-// {
+function mostrar() 
+{
 
-// 	let repetir;
+	let corte;
+	
+	//SI NO UTILIZAMOS EL 9, SE VA A REPETIR HASTA 1000 VECES 
+	for (let i = 0 ; i < 1000; i++) {
 
-// 	for (let i = 0 ; i < 10; i++) {
+		corte = prompt("Para cortar ingrese " + 9);
 
-// 		repetir = prompt("Para cortar ingrese " + 9);
+		if(	corte == 9){
+			break;
+		}
 
-// 		if(	repetir == 9){
-// 			break;
-// 		}
+	}
 
-// 	}
-
-// }//FIN DE LA FUNCIÓN
+}//FIN DE LA FUNCIÓN
 
 /* For 5 bis, Realizar el programa que permita el ingreso de las notas (validar entre 0 y 10) , 
 el sexo (validar el sexo “f” o “m” o "b") de 7 alumnos, informar por console.log: 
@@ -23,7 +24,7 @@ b) La nota más baja y el sexo de esa persona.
 c) La cantidad de varones que su nota haya sido mayor o igual a 6.
 d) La cantidad de alumnos desaprobados (nota < 4) */
 
-function mostrar() {
+/* function mostrar() {
 	let sexoAlumno;
 	let notaAlumno;
 	let totalNotas;
@@ -65,4 +66,4 @@ console.log("El promedio de las notas totales: " + promedio);
 console.log("La nota más baja es " + notaMasBaja + " y el sexo de esa persona es :" + sexoNotaBaja);
 console.log("Cantidad de varones que su nota haya sido mayor o igual a 6 es: " + varMayorSeis);
 console.log("Cantidad de alumnos desaprobados " + desaprobados);
-}
+} */

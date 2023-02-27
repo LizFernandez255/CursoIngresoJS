@@ -8,10 +8,12 @@ function mostrar() {
 		cantRepeticiones = parseInt(prompt("Error. Ingrese un número:"));
 	}
 
-	for (i = 0; i < cantRepeticiones; i++) {
+	//MIENTRAS LA CANTIDAD DE REPETICIONES SEA MENOR AL i(el cual incrementa a medida con las repeticiones i++) SE INGRESA AL BUCLE
+	for (let i = 0; i < cantRepeticiones; i++) {
 
 		document.write("Hola UTN FRA" + "<br>");
 
 	}
+
 
 }//FIN DE LA FUNCIÓN

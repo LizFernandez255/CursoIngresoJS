@@ -8,13 +8,15 @@ function mostrar() {
 
 	numero = parseInt(prompt("Ingrese números:"));
 
-	for (let i = 1; i <= numero; i++) {
+	for (let i = 0; i < numero; i++) {
 
 		if (i % 2 == 0) {
 			contadorPar = contadorPar + 1;
+			// mostrar los numeros pares desde el 1 al número ingresado, 
 			console.log(i);
 		}
 	}
+	// y mostrar la cantidad de numeros pares encontrados. 
 	console.log("Pares" + contadorPar);
 
 
