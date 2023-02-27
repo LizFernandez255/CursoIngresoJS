@@ -1,3 +1,5 @@
+/* Al seleccionar un destino informar si hace FRIO o CALOR en ese destino */
+
 function mostrar() {
 	let destino;
 	let mensaje;
@@ -9,10 +11,8 @@ function mostrar() {
 		case "Ushuaia":
 			mensaje = "Hace FRÍO";
 			break;
-		case "Cataratas":
-		case "Mar del plata":
+		default:
 			mensaje = "Hace CALOR";
-			break;
 	}
 	alert(mensaje);
 }//FIN DE LA FUNCIÓN

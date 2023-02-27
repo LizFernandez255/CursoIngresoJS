@@ -1,3 +1,8 @@
+/* al seleccionar un mes informar.
+si es Enero: "que comiences bien el año!!!."
+si es Marzo: "a clases!!!."
+si es Julio: "se vienen las vacaciones!!!."
+si es Diciembre: "Felices fiesta!!!." */
 function mostrar() {
 
 	let mes;
@@ -6,19 +11,20 @@ function mostrar() {
 	mes = document.getElementById("txtIdMes").value;
 
 
-	// if (mes == "Enero") {
-	// 		mensaje = "que comiences bien el año!!!.";
-	// 	} else if (mes == "Marzo") {
-	// 		mensaje = "a clases!!!.";                                
-	// 	} else if (mes == "Julio") {
-	// 		mensaje = "se vienen las vacaciones!!!.";
-	// 	} else if (mes == "Diciembre") {
-	// 		mensaje = "Felices Fiestas!!!";
-	// 	} else {
-	// 		mensaje = "Sos aburrido.";
-	// 	}
-
-	switch (mes) {
+	if (mes == "Enero") {
+			mensaje = "que comiences bien el año!!!.";
+		} else if (mes == "Marzo") {
+			mensaje = "a clases!!!.";                                
+		} else if (mes == "Julio") {
+			mensaje = "se vienen las vacaciones!!!.";
+		} else if (mes == "Diciembre") {
+			mensaje = "Felices Fiestas!!!";
+		} else {
+			mensaje = "Sos aburrido.";
+		}
+		alert(mensaje); 
+		
+	/* switch (mes) {
 		case "Enero":
 			mensaje = "que comiences bien el año!!!.";
 			break;
@@ -39,5 +45,5 @@ function mostrar() {
 			mensaje = "Sos aburrido.";
 	}
 
-	alert(mensaje);
+	alert(mensaje); */
 }//FIN DE LA FUNCIÓN

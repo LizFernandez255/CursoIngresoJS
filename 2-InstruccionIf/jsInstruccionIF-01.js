@@ -18,6 +18,17 @@ function mostrar() {
 }
 
 // --------------------------------1 BIS----------------------------------LIZ CAROLINA FERNANDEZ
+/* Ejercicio 1bis: 
+/con if
+pedir a una persona que fue de vaciones , 
+la distancia que viajo y el tiempo que tardo, para calcular la velocidad
+e informar:
+60 km/hr = muy lento 
+hata 80km/h= lento 
+hasta 100= buen ritmo
+hasta 120= ahi de la ley 
+mas = eso no se hace/  */
+
 // function mostrar() {
 
 // 	let distancia;
@@ -51,7 +62,16 @@ function mostrar() {
 // }
 
 // -------------------------------2 BIS-----------------------------------------
-
+/* Ejercicio 1 bis bis:
+con if
+ingresar el nombre y los datos requeridos para calcular el IMC , 
+e informar a la persona si es:
+Bajo peso <18.5
+Peso normal 18,5-24.9
+Preobesidad 25-26.9
+Obesidad I 27-29.9
+Obesidad II 30-34.9
+Obesidad III >40 */
 function mostrar() {
 
 	let altura;

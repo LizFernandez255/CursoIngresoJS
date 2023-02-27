@@ -1,3 +1,9 @@
+/* al seleccionar un mes informar.
+si tiene 28 días.
+si tiene 30 días.
+si tiene 31 días.
+ */
+
 function mostrar() {
 	let mes;
 	let mensaje;
@@ -17,8 +23,7 @@ function mostrar() {
 			break;
 		default:
 			mensaje = "si tiene 31 días.";
-
 	}
 	alert(mensaje);
-
 }//FIN DE LA FUNCIÓN
+

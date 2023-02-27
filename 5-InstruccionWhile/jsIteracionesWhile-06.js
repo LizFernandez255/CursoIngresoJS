@@ -1,3 +1,4 @@
+/* Al presionar el botón pedir 5 números e informar la suma acumulada y el promedio. */
 function mostrar() {
 	let numero;
 	let acumulador;
@@ -32,7 +33,6 @@ function mostrar() {
 
 
 
-/* Al presionar el botón pedir 5 números e informar la suma acumulada y el promedio. */
 /* function mostrar() {
 	let numero;
 	let i;

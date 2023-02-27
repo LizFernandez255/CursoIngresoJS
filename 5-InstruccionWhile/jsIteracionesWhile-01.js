@@ -1,5 +1,5 @@
 /* al presionar el botón mostrar 10 repeticiones con números ASCENDENTE, desde el 1 al 10. */
-function mostrar() {
+/* function mostrar() {
 	// declaro variables
 	let i;
 	let mensaje;
@@ -16,9 +16,11 @@ function mostrar() {
 	}
 	// muestro
 	alert(mensaje);
-}
-/* function mostrar() {
+} */
 
+/* While 1 bis- edad y nombre , informar el nombre de la persona mas vieja y la mas joven */
+function mostrar() {
+	//DECLARO VARIABLES
 	let banderaDelPrimero;
 	let edadMax;
 	let edadMin;
@@ -27,21 +29,21 @@ function mostrar() {
 	let respuesta;
 	let nombreMin;
 	let nombreMax;
-	let mensajeMax;
-	let mensajeMin;
 
+	//LAS INICIALIZO
 	banderaDelPrimero = true;
 	respuesta = "s";
-		
-		while(respuesta == "s") {
-			nombre = prompt("Ingrese su nombre:");
-			edad = parseInt(prompt("Ingrese su edad:"));
-	
-		while (isNaN(edad) || edad < 0 || edad > 103 ) {
+
+	//MIENTRAS LAS RESPUESTA SEA SI, PIDO EDAD Y NOMBRE
+	while (respuesta == "s") {
+		nombre = prompt("Ingrese su nombre:");
+		edad = parseInt(prompt("Ingrese su edad:"));
+
+		//MIENTRAS EN EDAD NO SE INGRESE UN NUMERO O SEA MENOR A 0 O MAYOR A 120 ESTE ERRADO
+		while (isNaN(edad) || edad < 0 || edad > 120) {
 			edad = parseInt(prompt("Error. Ingrese su edad:"));
-
 		}
-
+		//USAMOS BANDERA PARA GUARDAR LOS PRIMEROS DATOS(SI LA BANDERA ES TRUE ...)
 		if (banderaDelPrimero == true) {
 			edadMax = edad;
 			edadMin = edad;
@@ -49,30 +51,28 @@ function mostrar() {
 			nombreMin = nombre;
 			banderaDelPrimero = false;
 		}
+		//SINO SI LA EDADMAX ES MENOR A LA INGRESADA SE GUARDA LA EDAD Y EL NOMBRE
 		else if (edadMax < edad) { //numero ingresado < al minimo
 			nombreMax = nombre;
 			edadMax = edad;
-		
-		} else if (edadMin > edad ){
+
+			//SINO SI LA EDAD MINIMA ES MAYOR A LA INGRESADA SE GUARDA EN EDAD Y EL NOMBRE
+		} else if (edadMin > edad) {
 			nombreMin = nombre;
 			edadMin = edad;
 
 		}
 
 		respuesta = prompt("Desea ingresar mas datos? s/n");
-		
-	}
-	
-	mensajeMax = "La edad máxima es " + edadMax + " años de " + nombreMax + ".";
-	mensajeMin = "La edad mínima es " + edadMin + " años de " + nombreMin + ".";
 
-	document.write(mensajeMin + " </br>");
-	document.write(mensajeMax + " </br>");
-	
-	
+	}
+
+	document.write("La edad mínima es " + edadMin + " años de " + nombreMin + " </br>");
+	document.write("La edad máxima es " + edadMax + " años de " + nombreMax + " </br>");
+
+
 }
 
- */
 
 
 
@@ -96,7 +96,8 @@ function mostrar() {
 
 
 
-/*
+
+/*DE CLASES
 al presionar el botón "mostrar", mostrar 125 repeticiones 
 con números ASCENDENTE, desde el 1 al 125. 
 a) contar los numeros IMPARES 

@@ -1,4 +1,8 @@
-function mostrar() {
+/* al seleccionar un mes informar.
+si es Febrero: " Este mes no tiene más de 29 días."
+si NO es Febrero: "Este mes tiene 30 o más días" */
+
+/* function mostrar() {
 	let mes;
 	let mensaje;
 
@@ -6,13 +10,26 @@ function mostrar() {
 
 	switch (mes) {
 		case "Febrero":
-			mensaje = "Este mes no tiene más de 29 días"
+			mensaje = "Este mes no tiene más de 29 días";
 			break;
 		default:
-			mensaje = "Este mes tiene 30 o más días"
+			mensaje = "Este mes tiene 30 o más días";
 			break;
 	}
 	alert(mensaje);
 
+}//FIN DE LA FUNCIÓN */
 
-}//FIN DE LA FUNCIÓN
+function mostrar() {
+	let mes;
+	let mensaje;
+
+	mes = document.getElementById("txtIdMes").value;
+
+	if (mes == "Febrero"){
+		mensaje = "Este mes no tiene más de 29 días";
+	} else {
+		mensaje = "Este mes tiene 30 o más días";
+	}
+	alert(mensaje);
+}
